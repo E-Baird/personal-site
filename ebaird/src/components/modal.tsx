@@ -16,7 +16,7 @@ const bodyText = (
   </div>
 );
 
-const About = (props: IAboutProps) => {
+const Modal = (props: IAboutProps) => {
   const { isOpen, onClose } = props;
   if (isOpen) {
     return ReactDOM.createPortal(
@@ -32,4 +32,4 @@ const About = (props: IAboutProps) => {
   }
 };
 
-export default About;
+export default Modal;

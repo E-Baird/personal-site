@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from "react";
-import About from "./about";
+import Modal from "./modal";
 import {
   BsLinkedin,
   BsGithub,
@@ -49,7 +49,7 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
           </div>
         </div>
       </div>
-      <About isOpen={showModal} onClose={toggleModal} />
+      <Modal isOpen={showModal} onClose={toggleModal} />
     </div>
   );
 };

@@ -36,6 +36,7 @@
 }
 
 .icon-flex-box-item:hover {
+  cursor: pointer;
   color: #474e5c;
 }
 

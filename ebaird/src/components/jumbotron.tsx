@@ -4,7 +4,7 @@ import {
   BsLinkedin,
   BsGithub,
   BsEnvelope,
-  BsQuestionSquare,
+  BsQuestionCircle,
 } from "react-icons/bs";
 
 interface IJumbotronProps {
@@ -26,7 +26,7 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
           <hr />
           <div className="icon-flex-box">
             <div className="icon-flex-box-item" onClick={toggleModal}>
-              <BsQuestionSquare />
+              <BsQuestionCircle />
             </div>
             <a
               className="icon-flex-box-item"

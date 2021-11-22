@@ -1,5 +1,6 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 import Modal from "./modal";
+import useFade from "../hooks/fadeHook";
 import {
   BsLinkedin,
   BsGithub,
@@ -13,10 +14,7 @@ interface IJumbotronProps {
 
 const Jumbotron = (props: IJumbotronProps): ReactElement => {
   const { headerText } = props;
-  const [showModal, setShowModal] = useState(false);
-  const toggleModal = (event: React.MouseEvent<HTMLDivElement>): void => {
-    setShowModal(!showModal);
-  };
+  const [showModal, setShowModal, fadeProps] = useFade(false);
 
   return (
     <div>
@@ -25,7 +23,12 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
           {headerText}
           <hr />
           <div className="icon-flex-box">
-            <div className="icon-flex-box-item" onClick={toggleModal}>
+            <div
+              className="icon-flex-box-item"
+              onClick={() => {
+                setShowModal(true);
+              }}
+            >
               <BsQuestionCircle />
             </div>
             <a
@@ -49,7 +52,13 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
           </div>
         </div>
       </div>
-      <Modal isOpen={showModal} onClose={toggleModal} />
+      <Modal
+        isOpen={showModal}
+        onClose={() => {
+          setShowModal(false);
+        }}
+        fadeProps={fadeProps}
+      />
     </div>
   );
 };

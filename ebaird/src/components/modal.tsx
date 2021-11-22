@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { IFadeProps } from "../hooks/fadeHook";
 
 interface IAboutProps {
   isOpen: boolean;
   onClose: (event: React.MouseEvent<HTMLDivElement>) => void;
+  fadeProps: IFadeProps;
 }
 
 const bodyText = (
@@ -17,10 +19,15 @@ const bodyText = (
 );
 
 const Modal = (props: IAboutProps) => {
-  const { isOpen, onClose } = props;
+  const { isOpen, onClose, fadeProps } = props;
+  const modalStyle: React.CSSProperties = { ...fadeProps.style };
   if (isOpen) {
     return ReactDOM.createPortal(
-      <div className="modal" onClick={onClose}>
+      <div
+        style={modalStyle}
+        onClick={onClose}
+        onAnimationEnd={fadeProps.onAnimationEnd}
+      >
         <div className="modal-content">
           <div className="modal-body">{bodyText}</div>
         </div>

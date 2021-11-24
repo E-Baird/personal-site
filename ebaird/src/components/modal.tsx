@@ -24,6 +24,7 @@ const Modal = (props: IAboutProps) => {
   if (isOpen) {
     return ReactDOM.createPortal(
       <div
+        className="modal"
         style={modalStyle}
         onClick={onClose}
         onAnimationEnd={fadeProps.onAnimationEnd}

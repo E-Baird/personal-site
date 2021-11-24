@@ -25,17 +25,6 @@ const useFade = (initial: boolean) => {
 
   const style = {
     animation: `${show ? "fadeIn" : "fadeOut"} .3s`,
-    position: "fixed",
-    backgroundColor: "inherit",
-    zIndex: "1",
-    left: "0",
-    top: "0",
-    overflow: "auto",
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
   };
 
   const fadeProps: IFadeProps = {

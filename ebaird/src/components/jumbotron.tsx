@@ -32,22 +32,31 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
               <BsQuestionCircle />
             </div>
             <a
-              className="icon-flex-box-item"
               href="https://www.linkedin.com/in/emily-baird/"
-            >
-              <BsLinkedin />
+              >
+              <div
+                className="icon-flex-box-item"
+              >
+                <BsLinkedin />
+              </div>
             </a>
             <a
-              className="icon-flex-box-item"
               href="https://github.com/E-Baird/"
-            >
-              <BsGithub />
+              >
+              <div
+                className="icon-flex-box-item"
+              >
+                <BsGithub />
+              </div>
             </a>
             <a
-              className="icon-flex-box-item"
               href="mailto:emilyiris.baird@gmail.com"
-            >
-              <BsEnvelope />
+              >
+              <div
+                className="icon-flex-box-item"
+              >
+                <BsEnvelope />
+              </div>
             </a>
           </div>
         </div>

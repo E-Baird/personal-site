@@ -35,8 +35,12 @@
   width: 100%;
 }
 
-.icon-flex-box-item:hover {
+.icon-flex-box-item {
   cursor: pointer;
+  color: #282c34;
+}
+
+.icon-flex-box-item:hover {
   color: #474e5c;
 }
 

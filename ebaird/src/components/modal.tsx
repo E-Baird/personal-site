@@ -10,11 +10,12 @@ interface IAboutProps {
 
 const bodyText = (
   <div>
-    Hi, I'm Emily. I'm a full-stack developer and computer science student based
-    in Calgary, Alberta. <br />
-    Day-to-day I work at PureWeb writing Node, React, and more. <br />
-    Other interests include cybersecurity, film photography, computer science
-    pedagogy, and language acquisition. <br />
+    Hi, I'm Emily. I'm a full-stack cloud developer based
+    in Calgary, Alberta. <br /><br />
+    In my day-to-day I work at <a href="https://pureweb.com">Pureweb</a>, where I get to make all kinds of cool stuff using AWS,<br />
+    Node, React, and more. I get especially stoked on serverless architectures and noSQL databases. <br /><br />
+    Other interests include cybersecurity, film photography, computer science <br />
+    pedagogy, language acquisition, and climbing rocks. <br />
   </div>
 );
 

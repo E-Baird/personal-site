@@ -6,21 +6,11 @@ interface IAboutProps {
   isOpen: boolean;
   onClose: (event: React.MouseEvent<HTMLDivElement>) => void;
   fadeProps: IFadeProps;
+  bodyText: JSX.Element;
 }
 
-const bodyText = (
-  <div>
-    Hi, I'm Emily. I'm a full-stack cloud developer based
-    in Calgary, Alberta. <br /><br />
-    In my day-to-day I work at <a href="https://pureweb.com">Pureweb</a>, where I get to make all kinds of cool stuff using AWS,<br />
-    Node, React, and more. I get especially stoked on serverless architectures and noSQL databases. <br /><br />
-    Other interests include cybersecurity, film photography, computer science <br />
-    pedagogy, language acquisition, and climbing rocks. <br />
-  </div>
-);
-
 const Modal = (props: IAboutProps) => {
-  const { isOpen, onClose, fadeProps } = props;
+  const { isOpen, onClose, fadeProps, bodyText } = props;
   const modalStyle: React.CSSProperties = { ...fadeProps.style };
   if (isOpen) {
     return ReactDOM.createPortal(

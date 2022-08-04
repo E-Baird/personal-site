@@ -16,6 +16,17 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
   const { headerText } = props;
   const [showModal, setShowModal, fadeProps] = useFade(false);
 
+  const aboutText = (
+    <div>
+      Hi, I'm Emily. I'm a full-stack cloud developer based
+      in Calgary, Alberta. <br /><br />
+      In my day-to-day I work at <a href="https://pureweb.com">Pureweb</a>, where I get to make all kinds of cool stuff using AWS,<br />
+      Node, React, and more. I get especially stoked on serverless architectures and noSQL databases. <br /><br />
+      Other interests include cybersecurity, film photography, computer science <br />
+      pedagogy, language acquisition, and climbing rocks. <br />
+    </div>
+  );
+
   return (
     <div>
       <div className="App-header">
@@ -67,6 +78,7 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
           setShowModal(false);
         }}
         fadeProps={fadeProps}
+        bodyText={aboutText}
       />
     </div>
   );

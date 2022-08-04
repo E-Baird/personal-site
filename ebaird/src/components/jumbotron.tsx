@@ -7,6 +7,7 @@ import {
   BsEnvelope,
   BsQuestionCircle,
 } from "react-icons/bs";
+import { BiGitBranch } from "react-icons/bi";
 
 interface IJumbotronProps {
   headerText: string;
@@ -14,10 +15,12 @@ interface IJumbotronProps {
 
 const Jumbotron = (props: IJumbotronProps): ReactElement => {
   const { headerText } = props;
-  const [showModal, setShowModal, fadeProps] = useFade(false);
+  const [showAboutModal, setShowAboutModal, fadeAboutProps] = useFade(false);
+  const [showProjectsModal, setShowProjectsModal, fadeProjectsProps] = useFade(false);
 
   const aboutText = (
     <div>
+      <h2>About</h2>
       Hi, I'm Emily. I'm a full-stack cloud developer based
       in Calgary, Alberta. <br /><br />
       In my day-to-day I work at <a href="https://pureweb.com">Pureweb</a>, where I get to make all kinds of cool stuff using AWS,<br />
@@ -26,6 +29,19 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
       pedagogy, language acquisition, and climbing rocks. <br />
     </div>
   );
+
+  const projectsText = (
+    <div>
+      <h2>Projects</h2>
+      Here are some of my favourite professional and personal projects.
+      <ul>
+        <li>MagpieCTF 2021</li>
+        <li>Introduction to Cross-Site Scripting</li>
+        <li>This is my Architecture</li>
+        <li>Photography</li>
+      </ul>
+    </div>
+  )
 
   return (
     <div>
@@ -37,10 +53,18 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
             <div
               className="icon-flex-box-item"
               onClick={() => {
-                setShowModal(true);
+                setShowAboutModal(true);
               }}
             >
               <BsQuestionCircle />
+            </div>
+            <div
+              className="icon-flex-box-item"
+              onClick={() => {
+                setShowProjectsModal(true);
+              }}
+            >
+              <BiGitBranch />
             </div>
             <a
               href="https://www.linkedin.com/in/emily-baird/"
@@ -60,25 +84,24 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
                 <BsGithub />
               </div>
             </a>
-            <a
-              href="mailto:emilyiris.baird@gmail.com"
-              >
-              <div
-                className="icon-flex-box-item"
-              >
-                <BsEnvelope />
-              </div>
-            </a>
           </div>
         </div>
       </div>
       <Modal
-        isOpen={showModal}
+        isOpen={showAboutModal}
         onClose={() => {
-          setShowModal(false);
+          setShowAboutModal(false);
         }}
-        fadeProps={fadeProps}
+        fadeProps={fadeAboutProps}
         bodyText={aboutText}
+      />
+      <Modal
+        isOpen={showProjectsModal}
+        onClose={() => {
+          setShowProjectsModal(false);
+        }}
+        fadeProps={fadeProjectsProps}
+        bodyText={projectsText}
       />
     </div>
   );

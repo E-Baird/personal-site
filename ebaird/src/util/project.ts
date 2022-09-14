@@ -7,7 +7,7 @@ export type Project = {
 
 export const projectData: Project[] = [
     {
-        title: "This Is My Architecture",
+        title: "AWS re:Invent 2021: This Is My Architecture",
         description: "In November 2021, I was given the opportunity to attend AWS re:Invent and to produce a video with the AWS This Is My Architecture team. We went in-depth into how PureWeb routes requests to virtual resources, and discussed the challenges and opportunities of a system designed around agent-based computing.",
         imageUrl: "images/tima.png",
         link: "https://www.youtube.com/watch?v=hrhBOOrR5v0"

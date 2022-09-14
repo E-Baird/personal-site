@@ -47,7 +47,6 @@
 .modal {
   background-color: inherit;
   position: fixed;
-  z-index: 1;
   top: 0;
   overflow: auto;
   width: 100%;
@@ -80,19 +79,26 @@
   max-width: 45%;
 }
 
-.project-image {
-  object-fit: cover;
-  cursor: pointer;
-  width: 100%;
+.project img {
   opacity: 0.85;
 }
-.project-image:hover {
+.project:hover img {
   opacity: 0.1;
+}
+
+.project-image {
+  object-fit: cover;
+  z-index: 0;
+  width: 100%;
+  border-radius: 15px;
+}
+.project-image:hover {
   transition-duration: 75ms;
 }
 
 .project-details {
   display: flex;
+  z-index: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -129,5 +135,14 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media (orientation: portrait) {
+  .project {
+    max-width: 65%;
+  }
+  .project:hover {
+    max-width: 70%;
   }
 }

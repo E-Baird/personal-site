@@ -23,7 +23,7 @@ const Projects = (props: IProjectProps) => {
                 onAnimationEnd={fadeProps.onAnimationEnd}
             >
                 <h2>Projects</h2>
-                <div className="project-container">
+                <div >
                     {projectsList.map(project => 
                         <ProjectView
                             key={project.title}

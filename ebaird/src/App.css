@@ -76,6 +76,7 @@
   border-radius: 15px;
   width: 40%;
   aspect-ratio: 16/9;
+  display: flex;
 }
 .project:hover {
   width: 45%;
@@ -83,17 +84,20 @@
 
 .project-mobile {
   border-radius: 15px;
-  width: 70%;
+  width: 60%;
   min-height: 200px;
 }
 
 .project-description {
   display: flex;
-  align-items: stretch;
-  height: 100%;
-  min-height: 100%;
+  flex: 1;
   flex-direction: column;
-  background-color: inherit;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 10px;
 }
 
 .buffer-bottom {
@@ -124,11 +128,8 @@
   }
 }
 
-/* @media (orientation: portrait) {
-  .project {
-    max-width: 65%;
+@media (orientation: portrait) {
+  .project-mobile {
+    width: 70%;
   }
-  .project:hover {
-    max-width: 70%;
-  }
-} */
+}

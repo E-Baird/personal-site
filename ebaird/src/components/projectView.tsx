@@ -31,10 +31,19 @@ const ProjectView = (props: IProjectViewProps) => {
                     {showDetails && (
                         <div 
                             className="project-description"
-                            style={{background: "linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75))"}}
+                            style={{
+                                background: "linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75))",
+                            }}
                         >
-                            <a href={projectDetails.link}><h2>{projectDetails.title}</h2></a>
+                            <h2>{projectDetails.title}</h2>
                             <p>{projectDetails.description}</p>
+                            <a 
+                                href={projectDetails.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <h3 className="icon-flex-box-item">{projectDetails.linkText? projectDetails.linkText : "Learn More"}</h3>
+                            </a>
                         </div>
                     )}
 
@@ -56,10 +65,19 @@ const ProjectView = (props: IProjectViewProps) => {
                     {showDetails && (
                         <div
                             className="project-description"
-                            style={{background: "linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75))"}}
+                            style={{
+                                background: "linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75))",
+                            }}
                         >                        
-                            <a href={projectDetails.link}><h2>{projectDetails.title}</h2></a>
+                            <h2>{projectDetails.title}</h2>
                             <p>{projectDetails.description}</p>
+                            <a 
+                                href={projectDetails.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <h3 className="icon-flex-box-item">{projectDetails.linkText? projectDetails.linkText : "Learn More"}</h3>
+                            </a>
                         </div>
                     )}
 

@@ -20,7 +20,7 @@ const About = (props: IAboutProps) => {
         onClick={onClose}
         onAnimationEnd={fadeProps.onAnimationEnd}
       >
-        <div className="modal-body">{bodyText}</div>
+        <div className="about-container">{bodyText}</div>
       </div>,
       document.body
     );

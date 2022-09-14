@@ -95,6 +95,13 @@
 .project-image:hover {
   transition-duration: 75ms;
 }
+.project-image-mobile-opacity {
+  object-fit: cover;
+  z-index: 0;
+  width: 100%;
+  border-radius: 15px;
+  opacity: 0.1 !important;
+}
 
 .project-details {
   display: flex;

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Project } from "../util/project";
-import { BrowserView, MobileView, isMobile } from "react-device-detect";
+import { BrowserView, MobileView } from "react-device-detect";
 
 interface IProjectViewProps {
     projectDetails: Project;
@@ -46,31 +46,35 @@ const ProjectView = (props: IProjectViewProps) => {
             </div> 
             </BrowserView>
             <MobileView
-                className="project"
+                className="project-container"
             >
-                <img
+                <div
+                    className="project"
                     onClick={(event) => {
                         // suppresses onClick action in parent element
                         event.stopPropagation()
-                        toggleShowDetails();
+                        toggleShowDetails()
                     }}
-                    className="project-image"
-                    src={projectDetails.imageUrl}
-                />
-                {showDetails && (
-                    <div
-                        className="project-details"
-                    >
-                        <a 
-                            href={projectDetails.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                >
+                    <img
+                        className={!showDetails ? "project-image" : "project-image-mobile-opacity"}
+                        src={projectDetails.imageUrl}
+                    />
+                    {showDetails && (
+                        <div
+                            className="project-details"
                         >
-                            <h3>{projectDetails.title}</h3>
-                        </a>
-                        <div className="project-description">{projectDetails.description}</div>
-                    </div>
-                )}
+                            <a 
+                                href={projectDetails.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <h3>{projectDetails.title}</h3>
+                            </a>
+                            <div className="project-description">{projectDetails.description}</div>
+                        </div>
+                    )}
+                </div>
             </MobileView>
         </div>
     )

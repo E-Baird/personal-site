@@ -9,20 +9,18 @@ interface IAboutProps {
   bodyText: JSX.Element;
 }
 
-const Modal = (props: IAboutProps) => {
+const About = (props: IAboutProps) => {
   const { isOpen, onClose, fadeProps, bodyText } = props;
-  const modalStyle: React.CSSProperties = { ...fadeProps.style };
+  const aboutStyle: React.CSSProperties = { ...fadeProps.style };
   if (isOpen) {
     return ReactDOM.createPortal(
       <div
         className="modal"
-        style={modalStyle}
+        style={aboutStyle}
         onClick={onClose}
         onAnimationEnd={fadeProps.onAnimationEnd}
       >
-        <div className="modal-content">
-          <div className="modal-body">{bodyText}</div>
-        </div>
+        <div className="modal-body">{bodyText}</div>
       </div>,
       document.body
     );
@@ -31,4 +29,4 @@ const Modal = (props: IAboutProps) => {
   }
 };
 
-export default Modal;
+export default About;

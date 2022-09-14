@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import Modal from "./modal";
+import About from "./modal";
 import useFade from "../hooks/fadeHook";
 import {
   BsLinkedin,
@@ -15,8 +15,8 @@ interface IJumbotronProps {
 
 const Jumbotron = (props: IJumbotronProps): ReactElement => {
   const { headerText } = props;
-  const [showAboutModal, setShowAboutModal, fadeAboutProps] = useFade(false);
-  const [showProjectsModal, setShowProjectsModal, fadeProjectsProps] = useFade(false);
+  const [showAbout, setShowAbout, fadeAboutProps] = useFade(false);
+  // const [showProjectsModal, setShowProjectsModal, fadeProjectsProps] = useFade(false);
 
   const aboutText = (
     <div>
@@ -53,16 +53,16 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
             <div
               className="icon-flex-box-item"
               onClick={() => {
-                setShowAboutModal(true);
+                setShowAbout(true);
               }}
             >
               <BsQuestionCircle />
             </div>
             <div
               className="icon-flex-box-item"
-              onClick={() => {
-                setShowProjectsModal(true);
-              }}
+              // onClick={() => {
+              //   setShowProjects(true);
+              // }}
             >
               <BiGitBranch />
             </div>
@@ -87,22 +87,22 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
           </div>
         </div>
       </div>
-      <Modal
-        isOpen={showAboutModal}
+      <About
+        isOpen={showAbout}
         onClose={() => {
-          setShowAboutModal(false);
+          setShowAbout(false);
         }}
         fadeProps={fadeAboutProps}
         bodyText={aboutText}
       />
-      <Modal
+      {/* <Modal
         isOpen={showProjectsModal}
         onClose={() => {
           setShowProjectsModal(false);
         }}
         fadeProps={fadeProjectsProps}
         bodyText={projectsText}
-      />
+      /> */}
     </div>
   );
 };

@@ -15,6 +15,13 @@ export const projectData: Project[] = [
         linkText: "Watch the Video"
     },
     {
+        title: "ZZZA",
+        description: "ZZZA is a fast-paced autoscroller developed for the unexpanded Commodore VIC-20. Written in 6502 assembly, this project was all about space optimization. I worked on a small team to get the most bang for our buck with access to only 3k of RAM, and the final product is a fun, surprisingly challenging game that pays homage to its retro roots.",
+        imageUrl: "images/zzza.png",
+        link: "https://github.com/E-Baird/zzza",
+        linkText: "Play ZZZA"
+    },
+    {
         title: "MagpieCTF 2021",
         description: "MagpieCTF is an annual Capture-the-Flag security event hosted by the University of Calgary's Information Security club. I developed challenges for players that tested skills including reverse engineering, web exploitation, and open-source intelligence gathering. All challenges were containerized in Docker to work with our automated deployment pipeline.",
         imageUrl: "images/ctf-logo.png",

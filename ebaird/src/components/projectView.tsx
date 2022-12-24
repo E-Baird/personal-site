@@ -19,7 +19,7 @@ const ProjectView = (props: IProjectViewProps) => {
                 <div 
                     className="project"
                     style={{
-                        backgroundImage: `linear-gradient(rgba(255,255,255,.15), rgba(255,255,255,.15)), url(${projectDetails.imageUrl})`,
+                        backgroundImage: `linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)), url(${projectDetails.imageUrl})`,
                         backgroundSize: "cover"
                     }}
                     onMouseEnter={() => setShowDetails(true)}
@@ -32,7 +32,9 @@ const ProjectView = (props: IProjectViewProps) => {
                         <div 
                             className="project-description"
                             style={{
-                                background: "linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75))",
+                                background: "linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5))",
+                                color: "floralwhite"
+                                
                             }}
                         >
                             <h2>{projectDetails.title}</h2>
@@ -42,7 +44,14 @@ const ProjectView = (props: IProjectViewProps) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <h3 className="icon-flex-box-item">{projectDetails.linkText? projectDetails.linkText : "Learn More"}</h3>
+                                <h3 
+                                    className="icon-flex-box-item"
+                                    style={{
+                                        color: "floralwhite"
+                                    }}
+                                >
+                                    {projectDetails.linkText? projectDetails.linkText : "Learn More"}
+                                </h3>
                             </a>
                         </div>
                     )}

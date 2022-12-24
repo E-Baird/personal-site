@@ -25,8 +25,7 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
       <h2>About</h2>
       Hi, I'm Emily. I'm a full-stack cloud developer based
       in Calgary, Alberta. <br /><br />
-      In my day-to-day I work at <a href="https://pureweb.com">Pureweb</a>, where I get to make all kinds of cool stuff using AWS,<br />
-      Node, React, and more. I get especially stoked on serverless architectures and noSQL databases. <br /><br />
+      I get especially stoked on serverless architectures, distributed and agent-based systems, and noSQL databases. <br /><br />
       My other interests include cybersecurity, film photography, computer science <br />
       pedagogy, language acquisition, and climbing rocks. <br />
     </div>

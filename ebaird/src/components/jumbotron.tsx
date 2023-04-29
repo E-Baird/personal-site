@@ -24,7 +24,7 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
     <div>
       <h2>About</h2>
       Hi, I'm Emily. I'm a full-stack cloud developer based
-      in Calgary, Alberta. <br /><br />
+      in Montreal.<br /><br />
       I get especially stoked on serverless architectures, distributed and agent-based systems, and noSQL databases. <br /><br />
       My other interests include cybersecurity, film photography, computer science <br />
       pedagogy, language acquisition, and climbing rocks. <br />

@@ -1,17 +1,14 @@
 import React, { ReactElement } from "react";
 import { createPortal } from "react-dom";
-import { IFadeProps } from "../hooks/fadeHook";
 import { BsArrowReturnLeft } from "react-icons/bs";
 
 interface IAboutProps {
   isOpen: boolean;
   onClose: (event: React.MouseEvent<HTMLDivElement>) => void;
-  fadeProps: IFadeProps;
 }
 
 const About = (props: IAboutProps) => {
-  const { isOpen, onClose, fadeProps } = props;
-  const aboutStyle: React.CSSProperties = { ...fadeProps.style };
+  const { isOpen, onClose } = props;
 
   const transitUrl = "https://transitapp.com/";
   const transitLink: ReactElement = (
@@ -43,12 +40,11 @@ const About = (props: IAboutProps) => {
     </div>
   );
 
-  if (isOpen) {
-    return createPortal(
+  return (
+    isOpen ?
+    createPortal(
       <div
         className="modal"
-        style={aboutStyle}
-        onAnimationEnd={fadeProps.onAnimationEnd}
       >
         <div className="about-container">
           {aboutBody}
@@ -60,10 +56,9 @@ const About = (props: IAboutProps) => {
         </div>
       </div>,
       document.body
-    );
-  } else {
-    return null;
-  }
+    ) :
+    null
+  )
 };
 
 export default About;

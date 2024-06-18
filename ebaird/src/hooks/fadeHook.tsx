@@ -12,12 +12,14 @@ const useFade = (initial: boolean) => {
   const [isVisible, setIsVisible] = useState(show);
 
   useEffect(() => {
+    console.log('inside useefect')
     if (show) {
       setIsVisible(true);
     }
   }, [show]);
 
   const onAnimationEnd = () => {
+    console.log('inside onanimationend')
     if (!show) {
       setIsVisible(false);
     }

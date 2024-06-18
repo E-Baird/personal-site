@@ -1,6 +1,5 @@
-import { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 import About from "./about";
-import useFade from "../hooks/fadeHook";
 import {
   BsLinkedin,
   BsGithub,
@@ -13,8 +12,7 @@ interface IJumbotronProps {
 
 const Jumbotron = (props: IJumbotronProps): ReactElement => {
   const { headerText } = props;
-  const [showAbout, setShowAbout, fadeAboutProps] = useFade(false);
-
+  const [showAbout, setShowAbout] = useState<boolean>(false);
 
   return (
     <div>
@@ -57,7 +55,6 @@ const Jumbotron = (props: IJumbotronProps): ReactElement => {
         onClose={() => {
           setShowAbout(false);
         }}
-        fadeProps={fadeAboutProps}
       />
     </div>
   );

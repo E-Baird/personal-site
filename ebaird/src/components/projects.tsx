@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createPortal } from "react-dom";
 import ProjectView from "./projectView";
 import { Project } from "../util/project";
 import { IFadeProps } from "../hooks/fadeHook";
@@ -15,7 +15,7 @@ const Projects = (props: IProjectProps) => {
     const { isOpen, onClose, fadeProps, projectsList } = props;
     const projectsStyle: React.CSSProperties = { ...fadeProps.style };
     if (isOpen) {
-        return ReactDOM.createPortal(
+        return createPortal(
             <div
                 className="modal"
                 style={projectsStyle}

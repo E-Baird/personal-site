@@ -1,11 +1,11 @@
 import React from "react";
-import Jumbotron from "./components/jumbotron";
 import "./App.css";
+import { Switcher } from "./components/Switcher";
 
 function App() {
   return (
     <div className="App">
-      <Jumbotron headerText="EMILY BAIRD" />
+      <Switcher />
     </div>
   );
 }

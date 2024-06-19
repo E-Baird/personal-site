@@ -1,13 +1,8 @@
-.App {
+.center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
+.header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,33 +10,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 2vmin);
-}
-
-.Header-flex-item {
-  width: fit-content;
-}
-
-.solid-hr {
-  border-top: solid #282c34;
-  margin: 0;
-  width: 100%;
-}
-
-.icon-flex-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
-  width: 100%;
-}
-
-.icon-flex-box-item {
-  cursor: pointer;
-  color: #282c34;
-}
-
-.icon-flex-box-item:hover {
-  color: #474e5c;
 }
 
 .modal {
@@ -55,53 +23,12 @@
   padding: 10px;
 }
 
-.about-container {
+.centered-container {
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%)
-}
-
-.project-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: inherit;
-  padding: 10px;
-}
-
-.project {
-  border-radius: 15px;
-  width: 40%;
-  aspect-ratio: 16/9;
-  display: flex;
-}
-.project:hover {
-  width: 45%;
-}
-
-.project-mobile {
-  border-radius: 15px;
-  width: 60%;
-  min-height: 200px;
-}
-
-.project-description {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  padding: 10px;
-}
-
-.buffer-bottom {
-  min-height: 15px;
 }
 
 .button {
@@ -116,32 +43,23 @@
   color: #474e5c;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 50;
-  }
-  100% {
-    opacity: 1;
-  }
+.fit-content-width {
+  width: fit-content;
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
+.flex-box-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 100%;
   }
-  25% {
-    opacity: 50;
+  
+  .monochrome-icon {
+    cursor: pointer;
+    color: #282c34;
   }
-  100% {
-    opacity: 0;
+  
+  .monochrome-icon:hover {
+    color: #474e5c;
   }
-}
-
-@media (orientation: portrait) {
-  .project-mobile {
-    width: 70%;
-  }
-}

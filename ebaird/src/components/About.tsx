@@ -13,7 +13,11 @@ export const About = ({ backButtonBehaviour }: IAboutProps) => {
     </a>
   );
 
-  const zzzaUrl = "https://zzza.xyz/?file=main.prg";
+  const webTpLink: ReactElement = (
+    <a href={`${transitUrl}/en/trip-planner`} target="_blank" rel="noopener noreferrer">Web Trip Planner</a>
+  )
+
+  const zzzaUrl = "https://dylanleclair.github.io/zzza";
   const zzzaLink: ReactElement = (
     <a href={zzzaUrl} target="_blank" rel="noopener noreferrer">
       silly 8-bit video games
@@ -27,8 +31,8 @@ export const About = ({ backButtonBehaviour }: IAboutProps) => {
       Canada.
       <br />
       <br />
-      By day, I work at {transitLink}, where I split my time between writing
-      Typescript, mostly for mobile ticketing integrations, and daydreaming
+      By day, I work at {transitLink}, where I lead the project in charge of the
+      {webTpLink}, which involves writing Typescript and daydreaming
       about the S-Bahn. By night, I write {zzzaLink} and also sleep.
       <br />
       <br />

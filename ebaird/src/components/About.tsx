@@ -6,7 +6,7 @@ interface IAboutProps {
 }
 
 export const About = ({ backButtonBehaviour }: IAboutProps) => {
-  const transitUrl = "https://transitapp.com/";
+  const transitUrl = "https://transitapp.com";
   const transitLink: ReactElement = (
     <a href={transitUrl} target="_blank" rel="noopener noreferrer">
       Transit

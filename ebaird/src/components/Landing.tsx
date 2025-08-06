@@ -1,6 +1,5 @@
 import React from "react";
-import { BsLinkedin, BsGithub, BsQuestionCircle } from "react-icons/bs";
-// import { useState } from "react"
+import { BsLinkedin, BsGithub, BsQuestionCircle, BsPen } from "react-icons/bs";
 import { ClickableIcon } from "./ClickableIcon";
 import { IconBar } from "./IconBar";
 
@@ -22,6 +21,9 @@ export const Landing = ({ backButtonBehaviour }: ILandingProps) => {
           </ClickableIcon>
           <ClickableIcon link="https://github.com/E-Baird/">
             <BsGithub />
+          </ClickableIcon>
+          <ClickableIcon link="https://blog.ebaird.ca">
+            <BsPen />
           </ClickableIcon>
           <ClickableIcon link="https://www.linkedin.com/in/emily-baird/">
             <BsLinkedin />
